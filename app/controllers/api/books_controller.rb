@@ -1,5 +1,8 @@
 module Api
   class BooksController < ApplicationController
+	load_and_authorize_resource
+	before_action :authenticate_user!, except: [:index]
+
 	def index
 	  render json: Book.all
 	end
@@ -34,5 +37,12 @@ module Api
 	  @book.destroy
 	  head :no_content
 	end
+
+	private
+
+	def article_params
+	  params.permit(:book, :title, :author, :description, :pages, :published)
+	end
+
   end
 end
