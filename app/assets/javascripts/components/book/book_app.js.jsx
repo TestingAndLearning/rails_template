@@ -24,7 +24,6 @@ class BookApp extends React.Component {
 
   render() {
     const { error, isLoaded, books } = this.state;
-
     if (error) {
       const { error, isLoaded, status } = this.state;
       return (<div>Error: {status}</div>);
@@ -36,7 +35,7 @@ class BookApp extends React.Component {
           <h1>Books</h1>
           <div className="row">
             <div className="col-md-12">
-              Your books will go here!
+              <BookTable books={this.state.books} />
             </div>
           </div>
         </div>
