@@ -21,6 +21,7 @@ gem 'cancancan', '~> 1.10'
 gem 'rolify', '~> 5.2.0'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'react-rails', '~> 2.4.4'
+gem 'pg', '~> 0.18'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
