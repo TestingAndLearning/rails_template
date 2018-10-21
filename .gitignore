@@ -30,3 +30,6 @@
 /config/master.key
 
 .rbenv-vars
+/shared/log/*
+/shared/pids/*
+yarn.lock
